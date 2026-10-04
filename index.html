@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhil — Python Automation & AI Tools</title>
+<meta name="description" content="Web scrapers, Telegram bots and AI automations for small businesses. Fixed price, delivered in days.">
+<style>
+:root{--bg:#0b0f14;--panel:#101820;--line:#1e2a36;--text:#e6edf3;--muted:#9aa9b8;--accent:#4ade80}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.65}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-weight:700;font-size:1.05rem}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.92rem}
+nav a:hover{color:var(--text)}
+header{padding:70px 0 60px}
+.tag{display:inline-block;border:1px solid var(--line);background:var(--panel);color:var(--accent);font-size:.78rem;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.18;font-weight:800;max-width:760px}
+h1 em{color:var(--accent);font-style:normal}
+.sub{color:var(--muted);max-width:640px;margin:20px 0 30px;font-size:1.05rem}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 12px 12px 0}
+.btn-primary{background:var(--accent);color:#08130b}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.35rem}
+.stat span{color:var(--muted);font-size:.85rem}
+section{padding:56px 0}
+h2{font-size:1.6rem;margin-bottom:8px}
+.section-sub{color:var(--muted);margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card h3{font-size:1.08rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.93rem}
+.price{display:inline-block;margin-top:16px;color:var(--accent);font-weight:700;font-size:.88rem}
+.icon{font-size:1.5rem;margin-bottom:12px;display:block}
+.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:40px;text-align:center}
+.contact-box p{color:var(--muted);max-width:520px;margin:10px auto 26px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.85rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">nikhil<span>.dev</span></div>
+    <div><a href="#services">Services</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header>
+    <span class="tag">● Available for freelance — fast turnaround</span>
+    <h1>I turn repetitive work into <em>Python scripts</em> that run 24/7.</h1>
+    <p class="sub">Web scrapers, Telegram bots and AI-powered automations for small businesses and startups. Fixed price. Delivered in days, not months.</p>
+    <a class="btn btn-primary" href="mailto:osmnick999@gmail.com?subject=Project%20quote">Get a free quote</a>
+    <a class="btn btn-ghost" href="#work">See my work</a>
+    <div class="stats">
+      <div class="stat"><b>24/7</b><span>automations that never sleep</span></div>
+      <div class="stat"><b>2–4 days</b><span>typical delivery time</span></div>
+      <div class="stat"><b>Fixed price</b><span>no hourly surprises</span></div>
+    </div>
+  </header>
+
+  <section id="services">
+    <h2>What I can build for you</h2>
+    <p class="section-sub">Pick a service or describe your problem — I'll quote it within 24 hours.</p>
+    <div class="grid">
+      <div class="card"><span class="icon">🕷️</span><h3>Web Scraping & Data Extraction</h3><p>Leads, prices, listings, reviews — pulled from any website into a clean CSV or Excel file. Can run automatically every day and email you the results.</p><span class="price">from $50</span></div>
+      <div class="card"><span class="icon">🤖</span><h3>Telegram & Discord Bots</h3><p>Price alerts, community management, auto-moderation, AI Q&A bots. Built, tested and deployed on your server — with simple documentation.</p><span class="price">from $75</span></div>
+      <div class="card"><span class="icon">⚡</span><h3>AI Automation & Website Fixes</h3><p>LLM-powered workflows (OpenAI or private local models), slow WordPress sites sped up, boring manual tasks automated end-to-end.</p><span class="price">from $60</span></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Recent work</h2>
+    <p class="section-sub">Real systems I built and ran in production.</p>
+    <div class="grid">
+      <div class="card"><h3>Real-Time Market Analysis Engine</h3><p>Python engine scoring crypto markets every minute using RSI, momentum, order flow and live news sentiment — with instant Telegram alerts and autonomous execution.</p></div>
+      <div class="card"><h3>AI News Sentiment Pipeline</h3><p>Scrapes multiple RSS feeds and the Fear & Greed index every 5 minutes, scores market sentiment from -10 to +10 and feeds it into live decision systems.</p></div>
+      <div class="card"><h3>Website Audit Machine</h3><p>One command checks any website for speed, mobile-friendliness, SEO and security issues — and writes a plain-English report with the exact fixes. (In progress)</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h2>Have a boring, repetitive task?</h2>
+      <p>Tell me what's eating your time. I'll reply within 24 hours with an exact price and delivery date. No calls needed — everything over email or Telegram.</p>
+      <a class="btn btn-primary" href="mailto:osmnick999@gmail.com">osmnick999@gmail.com</a>
+      <a class="btn btn-ghost" href="https://github.com/imnick009" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>© 2025 Nikhil · Hand-built, no page builders · Loads in under 1 second — your site can too.</footer>
+</div>
+</body>
+</html>
