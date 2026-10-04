@@ -21,9 +21,9 @@ header{padding:70px 0 60px}
 h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.18;font-weight:800;max-width:760px}
 h1 em{color:var(--accent);font-style:normal}
 .sub{color:var(--muted);max-width:640px;margin:20px 0 30px;font-size:1.05rem}
-.btn{display:inline-block;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 12px 12px 0}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 12px 12px 0;border:none;cursor:pointer;font-family:inherit}
 .btn-primary{background:var(--accent);color:#08130b}
-.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
 .stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
 .stat b{display:block;font-size:1.35rem}
 .stat span{color:var(--muted);font-size:.85rem}
@@ -39,6 +39,8 @@ h2{font-size:1.6rem;margin-bottom:8px}
 .contact-box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:40px;text-align:center}
 .contact-box p{color:var(--muted);max-width:520px;margin:10px auto 26px}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.85rem;text-align:center}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--accent);color:#08130b;padding:12px 24px;border-radius:8px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
 </style>
 </head>
 <body>
@@ -52,7 +54,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <span class="tag">● Available for freelance — fast turnaround</span>
     <h1>I turn repetitive work into <em>Python scripts</em> that run 24/7.</h1>
     <p class="sub">Web scrapers, Telegram bots and AI-powered automations for small businesses and startups. Fixed quote after a free consultation. Delivered in days, not months.</p>
-    <a class="btn btn-primary" href="mailto:osmnick999@gmail.com?subject=Project%20quote">Get a free quote</a>
+    <button class="btn btn-primary" onclick="copyEmail()">Get a free quote</button>
     <a class="btn btn-ghost" href="#work">See my work</a>
     <div class="stats">
       <div class="stat"><b>24/7</b><span>automations that never sleep</span></div>
@@ -85,12 +87,25 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="contact-box">
       <h2>Have a boring, repetitive task?</h2>
       <p>Tell me what's eating your time. I'll reply within 24 hours with an exact quote and delivery date. No calls needed — everything over email or Telegram.</p>
-      <a class="btn btn-primary" href="mailto:osmnick999@gmail.com">osmnick999@gmail.com</a>
+      <button class="btn btn-primary" onclick="copyEmail()">osmnick999@gmail.com</button>
       <a class="btn btn-ghost" href="https://github.com/imnick009" target="_blank">GitHub</a>
     </div>
   </section>
 
   <footer>© 2026 Nikhil · Hand-built, no page builders · Loads in under 1 second — your site can too.</footer>
 </div>
+
+<div class="toast" id="toast">✓ Email copied to clipboard!</div>
+
+<script>
+function copyEmail() {
+  const email = 'osmnick999@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+</script>
 </body>
 </html>
